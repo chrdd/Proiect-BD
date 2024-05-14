@@ -39,7 +39,7 @@ public class StudentService {
         return studentRepository.save(student);
     }
     public Student findStudentById(Long Id){
-        Student student = studentRepository.findById(Id).orElseThrow(()->new IllegalStateException("Studentul cu ID-ul "+Id+" nu"));
+        Student student = studentRepository.findById(Id).orElseThrow(()->new IllegalStateException("Studentul cu ID-ul "+Id+" nu exista"));
         return student;
     }
 }

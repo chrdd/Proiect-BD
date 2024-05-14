@@ -39,11 +39,11 @@ public class StudentController {
     public ResponseEntity<Student> findStudentById(@PathVariable("studentId") Long studentId){
         Student student = studentService.findStudentById(studentId);
         return new ResponseEntity<>(student, HttpStatus.OK);
-    }
+    }return new ResponseEntity<>(HttpStatus.OK);
 
     @DeleteMapping(path="/delete/{studentId}")
     public ResponseEntity<?> deleteStudent(@PathVariable("studentId") Long Id){
         studentService.deleteStudent(Id);
-        return new ResponseEntity<>(HttpStatus.OK);
+
     }
 }
